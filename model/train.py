@@ -6,6 +6,7 @@ from joblib import dump
 import pandas as pd
 import pathlib
 
+print(./data/heart-disease.csv)
 df = pd.read_csv(pathlib.Path('data/heart-disease.csv'))
 y = df.pop('target')
 X = df
