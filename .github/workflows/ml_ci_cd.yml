@@ -16,9 +16,9 @@ jobs:
     - name: pip install
       run: pip install -r requirements.txt
     - name: imprimir url
-      run: ${{github.event.client_payload.dataseturl}}
+      run: "${{github.event.client_payload.dataseturl}}"
     - name: download dataset
-      run: wget -O data/heart-disease.csv ${{github.event.client_payload.dataseturl}}
+      run: wget -O data/heart-disease.csv "${{github.event.client_payload.dataseturl}}"
     - name: cat dataset
       run: head data/heart-disease.csv
     - name: train model
