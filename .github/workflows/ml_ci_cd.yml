@@ -40,7 +40,7 @@ jobs:
     - name: update _ by - 
       run: sed -i 's/_/-/g' manifest/k8s.yaml
     - name: update sha in k8
-      run: sed -i 's/{github.sha}/${{github.event.client_payload.sha }}/g' manifests/k8s.yml
+      run: sed -i 's/{github.sha}/${{github.event.client_payload.sha }}/g' manifest/k8s.yaml
     - name: show k8s.yaml 
       run: cat manifest/k8s.yaml
     - uses: okteto/context@2.7.0
